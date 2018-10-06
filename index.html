@@ -16,13 +16,31 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("images/dog.jpg");
+    background-image: url("images/background.png");
     min-height: 100%;
 }
 .w3-bar .w3-button {
     padding: 16px;
 }
+.road {
+  width: 100%;
+}
+.about {
+  position: relative;
+}
+.about-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 </style>
+<script>
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 57);
+});
+</script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -55,13 +73,14 @@ body, html {
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div>
+<header class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-middle w3-text-white" style="padding:48px;position: absolute; left: 72%; width: 50%">
+      <span class="w3-jumbo w3-hide-small" style="margin-top: -10px"><b>Sharing rides,</b></span><br>
+      <span class="w3-jumbo w3-hide-small" style="line-height:10px"><b>built by you</b></span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Sharing rides, built by you</span><br>
+      <span class="w3-large">Bike-sharing made more affordable</span><br>
+      <span class="w3-large">and environmentally conscious</span>
+    </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -74,6 +93,13 @@ body, html {
 
 
 <!-- About Section -->
+<div class="about" id="about">
+  <img src="images/road.png" class="road">
+  <div class="about-text">
+    <h3 class="w3-center">What is Taiga?</h3>
+    <p class="w3-center w3-large">Key features of our company</p>
+  </div>
+</div>
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
   <p class="w3-center w3-large">Key features of our company</p>
@@ -113,21 +139,7 @@ body, html {
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>We know design.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-round-large" src="images/piggy.png" alt="Piggy" width="700" height="394">
     </div>
     <div class="w3-col m6">
       <h3>We know design.</h3>
@@ -146,7 +158,21 @@ body, html {
       <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+      <img class="w3-image w3-round-large" src="images/bike.png" alt="Bike" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/hub.png" alt="Hub" width="700" height="394">
+    </div>
+    <div class="w3-col m6">
+      <h3>We know design.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
     </div>
   </div>
 </div>
